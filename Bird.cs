@@ -2,21 +2,16 @@
 {
     public class Bird
     {
-        public int birdX;
-        public int birdY;
+        int birdX;
+        int birdY;
 
         public Bird (int birdY, int birdX)
         {
-            this.birdX = birdX;
-            this.birdY = birdY;
+            this.BirdX = birdX;
+            this.BirdY = birdY;
         }
-        public void setBirdX(int birdX)
-        {
-            this.birdX = birdX;
-        }
-        public void setBirdY(int birdY)
-        {
-            this.birdY = birdY;
-        }
+
+        public int BirdX { get => birdX; set => birdX = value; }
+        public int BirdY { get => birdY; set => birdY = value; }
     }
 }

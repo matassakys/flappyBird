@@ -23,7 +23,7 @@ namespace flappyBird
                     {
                         Console.Write("#");
                     }
-                    else if (x == bird.birdX && y == bird.birdY)
+                    else if (x == bird.BirdX && y == bird.BirdY)
                     {
                         Console.Write("C");
                     }

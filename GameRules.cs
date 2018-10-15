@@ -17,7 +17,7 @@ namespace flappyBird
         }
         public bool isGameOver()
         {
-            return (map.isWall(bird.birdX, bird.birdY));
+            return (map.isWall(bird.BirdX, bird.BirdY));
         }
         public void endGame()
         {
@@ -27,13 +27,13 @@ namespace flappyBird
         }
         public void flyUp()
         {
-            bird.setBirdX(bird.birdX - 3);
+            bird.BirdX = bird.BirdX - 3;
             flaps++;
             if (isGameOver()) endGame();
         }
         public void fallingDown()
         {
-            bird.setBirdX(bird.birdX + 1);
+            bird.BirdX = bird.BirdX + 1;
             if (isGameOver()) endGame();
         }
         public void moveObstacles()

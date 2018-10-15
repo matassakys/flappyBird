@@ -19,12 +19,12 @@ namespace flappyBird
         {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1 },
         {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1 }
         };
-        public int Height;
-        public int Width;
+        int height;
+        int width;
         public Map()
         {
-            Height = map.GetLength(0);
-            Width = map.GetLength(1);
+            height = map.GetLength(0);
+            width = map.GetLength(1);
             Console.SetWindowSize(Width+20, Height+2);
         }
         public bool isWall(int x, int y)
@@ -33,16 +33,20 @@ namespace flappyBird
         }
         public void swapColumns(int leftOne, int rightOne)
         {
-            for (int i = 0; i < Height; i++)
+            for (int i = 0; i < height; i++)
             {
                 map[i, leftOne] = map[i, rightOne];
             }
         }
         int gapBetweenObstacles = 0;
         Random random = new Random();
+
+        public int Height { get => height; }
+        public int Width { get => width; }
+
         public void generateObstacle()
         {
-            int[] nextObstacle = new int[Height];
+            int[] nextObstacle = new int[height];
             gapBetweenObstacles++;
             if (gapBetweenObstacles == 5)
             {
@@ -68,9 +72,9 @@ namespace flappyBird
             {
                 nextObstacle = new int[] { 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1 };
             }
-            for (int i = 0; i < Height; i++)
+            for (int i = 0; i < height; i++)
             {
-                map[i, Width-1] = nextObstacle[i];
+                map[i, width-1] = nextObstacle[i];
             }
         }
     };
