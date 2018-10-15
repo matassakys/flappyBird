@@ -7,8 +7,8 @@
 
         public Bird (int birdY, int birdX)
         {
-            this.BirdX = birdX;
-            this.BirdY = birdY;
+            this.birdX = birdX;
+            this.birdY = birdY;
         }
 
         public int BirdX { get => birdX; set => birdX = value; }
